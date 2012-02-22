@@ -857,7 +857,7 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 text = ''.join([chr(ord(f)) for f in frags[-1]])
             except ValueError:
                 text = "Unicode"
-            shape = String(x+rl, y-y1-dy0+baseLineShift, text)
+            shape = String(x, y-y1-dy0+baseLineShift, text)
             self.applyStyleOnShape(shape, node)
             if c.nodeType == c.ELEMENT_NODE and c.nodeName == "tspan":
                 self.applyStyleOnShape(shape, c)
